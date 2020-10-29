@@ -107,7 +107,7 @@ public class Main {
         String[] keyStringArray = keys.split(",");
         byte[] keyBytes = new byte[keyStringArray.length];
         for (int i = 0; i < keyStringArray.length; i++) {
-            int number = Integer.parseInt(keyStringArray[i]) - Byte.MIN_VALUE;
+            int number = Integer.parseInt(keyStringArray[i]) + Byte.MIN_VALUE;
             if (number < Byte.MIN_VALUE || number > Byte.MAX_VALUE) {
                 throw new NumberFormatException("Number was not between 0 and 255");
             }
