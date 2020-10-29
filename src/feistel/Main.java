@@ -41,7 +41,7 @@ public class Main {
                         return;
                 }
             } catch(InputMismatchException e) {
-                Utils.printIntInputException(e, 1, 2);
+                Utils.handleIntInputException(e, 1, 2, scanner);
             } catch (NumberFormatException e) {
                 Utils.handleNumberFormatException(e);
             }
@@ -86,7 +86,7 @@ public class Main {
                     default -> throw new InputMismatchException("Bitte eine gültige Zahl eingeben!");
                 }
             } catch (InputMismatchException e) {
-                Utils.printIntInputException(e, 1, 2);
+                Utils.handleIntInputException(e, 1, 2, scanner);
             } catch (NumberFormatException e) {
                 Utils.handleNumberFormatException(e);
             }
